@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎉 Festa Surpresa da Thaís</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Quicksand", sans-serif;
+        background: linear-gradient(135deg, #ffe6f0, #ffe5cc);
+        color: #333;
+        text-align: center;
+        overflow-x: hidden;
+      }
+      header {
+        padding: 80px 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      .button {
+        background: #ff66b2;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 25px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin: 40px auto;
+        max-width: 900px;
+      }
+      .gallery img {
+        width: 250px;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+      .section {
+        padding: 40px 20px;
+        background: white;
+        margin: 20px auto;
+        max-width: 600px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: center;
+      }
+      th {
+        background-color: #ff66b2;
+        color: white;
+      }
+      button {
+        background-color: #28a745;
+        color: white;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #218838;
+      }
+      #modal {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+
+      #modalContent {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        max-width: 90%;
+        width: 300px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      #modalContent h2 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+
+      #passwordInput {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      #modalContent button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        margin: 0.3rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #modalContent button:first-of-type {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      #modalContent button:last-of-type {
+        background-color: #f44336;
+        color: white;
+      }
+
+      @media (max-width: 400px) {
+        #modalContent {
+          width: 90%;
+          padding: 1rem;
+        }
+
+        #modalContent h2 {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>🎉 Festa Surpresa da Thaís Viegas Luz 🎉</h1>
+      <p>
+        Estamos preparando algo especial para ela no dia
+        <strong>17 de março de 2025</strong>!
+      </p>
+      <p>
+        Vai ser uma noite cheia de 🍕 pizzas deliciosas, amigos e boas risadas!
+      </p>
+      <p>Queremos muito que você esteja presente (mas sem estragar a surpresa 😜)</p>
+    </header>
+
+    <div class="gallery">
+      <img src="img/1.jpeg" alt="Foto 1 da Thaís" />
+      <img src="img/2.jpeg" alt="Foto 2 da Thaís" />
+      <img src="img/3.jpeg" alt="Foto 3 da Thaís" />
+      <img src="img/4.jpeg" alt="Foto 4 da Thaís" />
+      <img src="img/5.jpeg" alt="Foto 5 da Thaís" />
+      <img src="img/6.jpeg" alt="Foto 6 da Thaís" />
+    </div>
+
+    <div class="section" id="detalhes">
+      <h2>Detalhes da Festa</h2>
+      <p>
+        <strong>📍 Local:</strong> Rua Visconde do Rio Branco, 197 </p> <p></p>Salão de
+        festas do edifício Beatriz
+      </p>
+      <div style="margin-top: 20px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4566.622073017777!2d-47.639211423783216!3d-22.723336331342356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c631a53ebab1e5%3A0xfb441a2e644cc849!2sRua%20Visconde%20do%20Rio%20Branco%2C%20197%20-%20Alto%2C%20Piracicaba%20-%20SP%2C%2013419-110!5e1!3m2!1sen!2sbr!4v1744804322332!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p><strong>📅 Data:</strong> 17 de março de 2025</p>
+      <p>
+        <strong>🕒 Horário:</strong> Chegue até as <strong>19h15</strong> –
+        Thaís chega às <strong>19h30</strong>!
+      </p>
+      <p><strong>🍕 Comida:</strong> Vai ter muita pizza! Traga o apetite 😋</p>
+      <p><strong>🔇 Aviso:</strong> É SURPRESA, nada de dar pistas! 🙊</p>
+      <hr />
+      <h3>Dúvidas?</h3>
+      <p>
+        Falar com João Pedro pelo Whatsapp: <strong>📞 (19) 99241-4481</strong>
+        <a href="https://wa.me/qr/7RXTK6GGYM53D1" target="_blank">
+          <img src="img/qr-code.png" alt="QR Code WhatsApp" style="width: 200px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-top: 30px;" />
+        </a>
+      </p>
+      <p>
+        <strong>⚠️ Aviso:</strong> Evite falar após as 17h, pois a Thaís pode
+        acabar vendo a mensagem.
+      </p>
+      <p>
+        Ou com a Soraia pelo Whatsapp: <strong>📞 (19) 99839-7888</strong>
+      </p>
+      
+      <hr />
+    </div>
+
+    <div class="section" id="guestsSection">
+      <h2>Convidados Confirmados:</h2>
+      <table id="guestsTable">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Confirmado</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div id="modalContent">
+        <h2 id="modalTitle">Confirme sua presença</h2>
+        <input
+          type="password"
+          id="passwordInput"
+          placeholder="Senha de 4 dígitos"
+          maxlength="4"
+          pattern="\d{4}"
+          inputmode="numeric"
+          required
+          aria-label="Senha de 4 dígitos"
+        />
+        <div>
+          <button onclick="confirmarSenha()">Confirmar</button>
+          <button onclick="fecharModal()">Cancelar</button>
+        </div>
+      </div>
+
+    <script>
+      let currentGuest = null; 
+
+      
+      window.onload = function () {
+        fetch("/getGuests")
+          .then((response) => response.json())
+          .then((guests) => {
+            const tableBody = document
+              .getElementById("guestsTable")
+              .querySelector("tbody");
+
+            guests.forEach((guest) => {
+              const row = document.createElement("tr");
+              row.innerHTML = `
+              <td>${guest.name}</td>
+              <td>${guest.confirm === "Y" ? "Sim" : "Não"}</td>
+              <td>
+                ${
+                  guest.confirm === "N"
+                    ? `<button onclick="abrirModal('${guest.name}')">Confirmar</button>`
+                    : "Confirmado"
+                }
+              </td>
+            `;
+              tableBody.appendChild(row);
+            });
+          })
+          .catch((error) => {
+            console.error("Erro ao carregar os convidados:", error);
+          });
+      };
+
+      
+      function abrirModal(name) {
+        currentGuest = name; 
+        document.getElementById("modal").style.display = "flex";
+      }
+
+      
+      function fecharModal() {
+        document.getElementById("modal").style.display = "none";
+        document.getElementById("passwordInput").value = ""; 
+      }
+
+      
+      function confirmarSenha() {
+        const password = document.getElementById("passwordInput").value;
+
+        if (password.length === 4) {
+          
+          fetch("/confirmPresence", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ name: currentGuest, password: password }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.message === "Presença confirmada com sucesso!") {
+                fecharModal();
+                alert("Presença confirmada!");
+                window.location.reload(); 
+              } else {
+                alert("Senha incorreta.");
+              }
+            });
+
+        } else {
+          alert("Por favor, insira uma senha válida de 4 dígitos.");
+        }
+      }
+    </script>
+  </body>
+</html>
