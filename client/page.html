@@ -87,68 +87,79 @@
         background-color: #218838;
       }
       #modal {
-        display: none;
-        justify-content: center;
-        align-items: center;
         position: fixed;
-        inset: 0;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
         background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        align-items: center;
+        justify-content: center;
         z-index: 999;
+        padding: 1rem;
+        box-sizing: border-box;
       }
 
       #modalContent {
-        background: white;
+        background-color: #fff;
         padding: 2rem;
-        border-radius: 10px;
-        max-width: 90%;
-        width: 300px;
+        border-radius: 16px;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         text-align: center;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        box-sizing: border-box;
       }
 
       #modalContent h2 {
         margin-bottom: 1rem;
-        font-size: 1.5rem;
       }
 
-      #passwordInput {
+      #modalContent input {
         width: 100%;
-        padding: 0.5rem;
-        font-size: 1rem;
-        margin-bottom: 1rem;
+        padding: 0.8rem;
+        font-size: 1.2rem;
+        border-radius: 8px;
         border: 1px solid #ccc;
-        border-radius: 5px;
+        margin-bottom: 1.5rem;
         text-align: center;
+        box-sizing: border-box;
+      }
+
+      #modalContent div {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
       }
 
       #modalContent button {
-        padding: 0.5rem 1rem;
+        flex: 1;
+        padding: 0.7rem;
         font-size: 1rem;
-        margin: 0.3rem;
         border: none;
-        border-radius: 5px;
+        border-radius: 8px;
         cursor: pointer;
+        transition: background-color 0.2s;
+        box-sizing: border-box;
       }
 
-      #modalContent button:first-of-type {
+      #modalContent button:first-child {
         background-color: #4caf50;
         color: white;
       }
 
-      #modalContent button:last-of-type {
+      #modalContent button:first-child:hover {
+        background-color: #45a045;
+      }
+
+      #modalContent button:last-child {
         background-color: #f44336;
         color: white;
       }
 
-      @media (max-width: 400px) {
-        #modalContent {
-          width: 90%;
-          padding: 1rem;
-        }
-
-        #modalContent h2 {
-          font-size: 1.2rem;
-        }
+      #modalContent button:last-child:hover {
+        background-color: #e0352b;
       }
     </style>
   </head>
@@ -180,9 +191,18 @@
         <strong>📍 Local:</strong> Rua Visconde do Rio Branco, 197 </p> <p></p>Salão de
         festas do edifício Beatriz
       </p>
-      <div style="margin-top: 20px;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4566.622073017777!2d-47.639211423783216!3d-22.723336331342356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c631a53ebab1e5%3A0xfb441a2e644cc849!2sRua%20Visconde%20do%20Rio%20Branco%2C%20197%20-%20Alto%2C%20Piracicaba%20-%20SP%2C%2013419-110!5e1!3m2!1sen!2sbr!4v1744804322332!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div style="margin-top: 20px; width: 100%; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4566.622073017777!2d-47.639211423783216!3d-22.723336331342356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c631a53ebab1e5%3A0xfb441a2e644cc849!2sRua%20Visconde%20do%20Rio%20Branco%2C%20197%20-%20Alto%2C%20Piracicaba%20-%20SP%2C%2013419-110!5e1!3m2!1sen!2sbr!4v1744804322332!5m2!1sen!2sbr"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
       </div>
+      
       <p><strong>📅 Data:</strong> 17 de março de 2025</p>
       <p>
         <strong>🕒 Horário:</strong> Chegue até as <strong>19h15</strong> –
@@ -192,19 +212,31 @@
       <p><strong>🔇 Aviso:</strong> É SURPRESA, nada de dar pistas! 🙊</p>
       <hr />
       <h3>Dúvidas?</h3>
-      <p>
-        Falar com João Pedro pelo Whatsapp: <strong>📞 (19) 99241-4481</strong>
-        <a href="https://wa.me/qr/7RXTK6GGYM53D1" target="_blank">
-          <img src="img/qr-code.png" alt="QR Code WhatsApp" style="width: 200px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-top: 30px;" />
+
+      <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+        <p>
+          Falar com João Pedro pelo Whatsapp: <br />
+          <strong>📞 (19) 99241-4481</strong>
+        </p>
+
+        <a href="https://wa.me/qr/7RXTK6GGYM53D1" target="_blank" style="display: inline-block;">
+          <img
+            src="img/qr-code.png"
+            alt="QR Code WhatsApp"
+            style="width: 100%; max-width: 200px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 20px auto;"
+          />
         </a>
-      </p>
-      <p>
-        <strong>⚠️ Aviso:</strong> Evite falar após as 17h, pois a Thaís pode
-        acabar vendo a mensagem.
-      </p>
-      <p>
-        Ou com a Soraia pelo Whatsapp: <strong>📞 (19) 99839-7888</strong>
-      </p>
+
+        <p style="margin-top: 10px;">
+          <strong>⚠️ Aviso:</strong> Evite falar após as 17h, pois a Thaís pode acabar vendo a mensagem.
+        </p>
+
+        <p>
+          Ou com a Soraia pelo Whatsapp: <br />
+          <strong>📞 (19) 99839-7888</strong>
+        </p>
+      </div>
+
       
       <hr />
     </div>
@@ -242,6 +274,7 @@
           <button onclick="fecharModal()">Cancelar</button>
         </div>
       </div>
+    </div>
 
     <script>
       let currentGuest = null; 

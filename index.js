@@ -11,7 +11,7 @@ const PORT = 3000;
 // Lista de convidados
 var guests = [
   { name: "Thaís Luz", password: "9371", confirm: "Y" },
-  { name: "João Medinilha", password: "1842", confirm: "Y" },
+  { name: "João Medinilha", password: "1842", confirm: "N" },
   { name: "Soraia Luz", password: "2058", confirm: "N" },
   { name: "Mario Luz", password: "2058", confirm: "N" },
   { name: "Thiago Luz", password: "7214", confirm: "N" },
